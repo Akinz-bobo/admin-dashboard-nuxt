@@ -1,75 +1,37 @@
-# Nuxt 3 Minimal Starter
+# Admin Dashboard (Vue 3 + Nuxt 3)
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+An admin dashboard for managing customers, products and transactions, built with Vue 3 and Nuxt 3.
 
-## Setup
+## What's in it
 
-Make sure to install the dependencies:
+- **Authentication** with JWT and route middleware that protects signed-in pages
+- **Customers, products and transactions** views with sortable, paginated tables (TanStack Table)
+- **Forms validated with Zod** through VeeValidate, sharing schemas between client and server
+- **State management with Pinia**
+- **Server API routes** in Nuxt's `server/` directory, serving seeded demo data
+- **Charts** for transaction activity
+- UI built with Tailwind CSS and Radix Vue components
+
+## Stack
+
+Vue 3, Nuxt 3, TypeScript, Pinia, TanStack Table, VeeValidate, Zod, Tailwind CSS
+
+## Run it locally
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+The app runs at `http://localhost:3000`.
 
-Build the application for production:
+## Project layout
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+| Folder | Purpose |
+|---|---|
+| `pages/` | Routes: auth, customers, products, transactions, profile |
+| `components/` | UI components |
+| `stores/` | Pinia stores |
+| `schemas/` | Zod validation schemas |
+| `middleware/` | Route guards |
+| `server/` | API routes and demo data |
